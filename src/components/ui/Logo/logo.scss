@@ -1,0 +1,25 @@
+.logo-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0B0B0B;
+}
+
+.logo-text {
+    color: white;
+}
+.logo-text h1 {
+    font-size: 5em;
+    padding: 0;
+    margin: 0;
+}
+
+.logo-text h2 {
+    font-size: 1em;
+}
+
+
+#application-logo {
+    width: 300px;
+    height: 300px;
+}
