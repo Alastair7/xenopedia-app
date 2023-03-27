@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TabMenu } from 'primereact/tabmenu';
+import './menu.scss'
 
 export default function AppTabMenu()
 {
