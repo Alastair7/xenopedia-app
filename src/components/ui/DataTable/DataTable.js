@@ -1,8 +1,8 @@
 import React from 'react';
-import Moment from 'moment'
+import Moment from 'moment';
 import { DataTable } from 'primereact/datatable';
 import { Column } from  'primereact/column';
-import './DataTable.scss'
+import './DataTable.scss';
 
 export default function AppDataTable() {
 
