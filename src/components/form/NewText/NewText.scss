@@ -3,9 +3,6 @@
         color:white;
         text-align: center;
     }
-    max-width: 100em;
-    width: 30em;
-    background-color: rgb(44, 41, 50);
 }
 
 .p-float-label {
@@ -22,6 +19,10 @@ margin: 20px;
 
 .p-button
 {
-    left: 50%;
+    display: block;
+    text-align: center;
 }
 
+form {
+    background-color: rgb(25, 25, 26);
+}

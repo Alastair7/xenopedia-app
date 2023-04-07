@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useFormik } from 'formik';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
@@ -6,12 +6,14 @@ import { InputTextarea} from 'primereact/inputtextarea';
 import { classNames } from 'primereact/utils';
 import { Toast } from 'primereact/toast';
 import './NewText.scss';
+import '../../../../node_modules/primeflex/primeflex.css'
 export default function NewTextForm() {
 
     const toast = useRef(null);
     const show = () => {
         toast.current.show({severity: 'success', summary: 'Form submited', detail: formik.values.title})
     }
+    
     const formik = useFormik({
         initialValues: {
             title: '',
@@ -32,7 +34,7 @@ export default function NewTextForm() {
         },
         onSubmit: (data) => {
             console.log(data);
-            show(data);
+            show();
             formik.resetForm();
         }
     });
@@ -45,10 +47,10 @@ export default function NewTextForm() {
     };
 
     return (
-        <div className='card flex justify-content-center'>
-            <h1>ADD TEXT</h1>
-            <form onSubmit={formik.handleSubmit} className='flex flex-column gap-2'>
+        <div class='card flex justify-content-center'>
+            <form onSubmit={formik.handleSubmit} class='flex align-items-center flex-column justify-content-center gap-2 w-6'>
                 <Toast ref={toast} />
+                <h1>ADD TEXT</h1>
                 <span className='p-float-label'>
                     <InputText
                     id='title'
@@ -75,7 +77,7 @@ export default function NewTextForm() {
                 </span>
                 {getFormErrorMessage('title')}
                 {getFormErrorMessage('text')}
-                <Button className='' type='submit' label='Add' />
+                <Button class='flex align-items-center justify-content-center w-min' type='submit' label='Add' />
             </form>
         </div>
     );
