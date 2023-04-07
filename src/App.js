@@ -8,6 +8,10 @@ import AddButton from './components/ui/AddButton/Button';
 import NewTextForm from './components/form/NewText/NewText..js';
 
 function App() {
+  const [showForm, setShowForm] = useState(false);
+  const formVisibility = () => {
+      setShowForm(!showForm);
+  }
   return (
     <div className='App'>
       <Logo />
