@@ -75,7 +75,7 @@ export default function NewTextForm() {
                 </span>
                 {getFormErrorMessage('title')}
                 {getFormErrorMessage('text')}
-                <Button type='submit' label='Add' />
+                <Button className='' type='submit' label='Add' />
             </form>
         </div>
     );
