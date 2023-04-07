@@ -1,6 +1,27 @@
 .card {
     h1 {
-        color:black;
+        color:white;
+        text-align: center;
     }
-    background-color: white;
+    max-width: 100em;
+    width: 30em;
+    background-color: rgb(44, 41, 50);
 }
+
+.p-float-label {
+    margin:30px;
+}
+
+.flex .flex-column .gap-2 {
+margin: 20px;
+}
+.p-inputtextarea {
+    width: 350px;
+    height: 150px;
+}
+
+.p-button
+{
+    left: 50%;
+}
+
