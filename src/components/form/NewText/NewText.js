@@ -8,6 +8,7 @@ import { Toast } from 'primereact/toast';
 import { Dialog } from 'primereact/dialog'
 import './NewText.scss';
 import '../../../../node_modules/primeflex/primeflex.css';
+import axios from 'axios';
 
 export default function NewTextForm(props) {
 
@@ -37,6 +38,8 @@ export default function NewTextForm(props) {
         },
         onSubmit: (data) => {
             console.log(data);
+            const newText = {Title: data.title, Text: data.text}
+            axios.post('https://localhost:32768/Text/NewText', newText);
             show();
             formik.resetForm();
         }
